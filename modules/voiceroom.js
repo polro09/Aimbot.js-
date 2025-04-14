@@ -31,7 +31,7 @@ const {
     const activeVoiceRooms = new Map();
     
     // 슬래시 커맨드 정의
-    const commands = [
+    const slashCommands = [
       new SlashCommandBuilder()
         .setName('보이스룸')
         .setDescription('보이스룸 기능을 설정합니다')
@@ -63,6 +63,7 @@ const {
             .setDescription('현재 보이스룸 설정을 확인합니다')
         )
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
+        .toJSON()
     ];
     
     /**
@@ -116,557 +117,549 @@ const {
         logger.error('VoiceRoom', `데이터 저장 중 오류 발생: ${error.message}`);
       }
     }
-    
-    /**
-     * 음성 상태 변경 이벤트 처리
-     * @param {VoiceState} oldState 이전 음성 상태
-     * @param {VoiceState} newState 새 음성 상태
-     */
-    async function handleVoiceStateUpdate(oldState, newState) {
-      try {
-        // 서버 ID 가져오기
-        const guildId = newState.guild.id;
-        
-        // 서버 설정이 없으면 무시
-        if (!voiceData[guildId]) return;
-        
-        const { categoryId, lobbyId } = voiceData[guildId];
-        
-        // 필수 설정이 없으면 무시
-        if (!categoryId || !lobbyId) return;
-        
-        // 사용자가 로비 채널에 입장한 경우
-        if (newState.channelId === lobbyId && (!oldState.channelId || oldState.channelId !== lobbyId)) {
-          await createCustomVoiceChannel(newState);
-        }
-        
-        // 생성된 보이스룸이 비어있는지 확인하고 정리
-        cleanupEmptyVoiceRooms(oldState);
-      } catch (error) {
-        logger.error('VoiceRoom', `음성 이벤트 처리 중 오류 발생: ${error.message}`);
+/**
+   * 음성 상태 변경 이벤트 처리
+   * @param {VoiceState} oldState 이전 음성 상태
+   * @param {VoiceState} newState 새 음성 상태
+   */
+async function handleVoiceStateUpdate(oldState, newState) {
+    try {
+      // 서버 ID 가져오기
+      const guildId = newState.guild.id;
+      
+      // 서버 설정이 없으면 무시
+      if (!voiceData[guildId]) return;
+      
+      const { categoryId, lobbyId } = voiceData[guildId];
+      
+      // 필수 설정이 없으면 무시
+      if (!categoryId || !lobbyId) return;
+      
+      // 사용자가 로비 채널에 입장한 경우
+      if (newState.channelId === lobbyId && (!oldState.channelId || oldState.channelId !== lobbyId)) {
+        await createCustomVoiceChannel(newState);
       }
+      
+      // 생성된 보이스룸이 비어있는지 확인하고 정리
+      cleanupEmptyVoiceRooms(oldState);
+    } catch (error) {
+      logger.error('VoiceRoom', `음성 이벤트 처리 중 오류 발생: ${error.message}`);
     }
-    
-    /**
-     * 커스텀 음성 채널 생성
-     * @param {VoiceState} voiceState 음성 상태
-     */
-    async function createCustomVoiceChannel(voiceState) {
-      try {
-        const { guild, member, channel } = voiceState;
-        const guildId = guild.id;
-        const settings = voiceData[guildId];
-        
-        // 카테고리 가져오기
-        const category = guild.channels.cache.get(settings.categoryId);
-        if (!category) {
-          logger.error('VoiceRoom', `카테고리를 찾을 수 없습니다: ${settings.categoryId}`);
-          return;
-        }
-        
-        // 사용자 이름 (별명 우선)
-        const userName = member.nickname || member.user.username;
-        
-        // 채널 생성
-        const voiceChannel = await guild.channels.create({
-          name: `🔊 ${userName}님의 룸`,
-          type: ChannelType.GuildVoice,
-          parent: category.id,
-          permissionOverwrites: [
-            {
-              id: guild.id, // @everyone
-              allow: [PermissionFlagsBits.Connect, PermissionFlagsBits.Speak]
-            },
-            {
-              id: member.id, // 생성자
-              allow: [
-                PermissionFlagsBits.Connect, 
-                PermissionFlagsBits.Speak,
-                PermissionFlagsBits.MuteMembers,
-                PermissionFlagsBits.DeafenMembers,
-                PermissionFlagsBits.ManageChannels,
-                PermissionFlagsBits.MoveMembers
-              ]
-            }
-          ]
-        });
-        
-        logger.success('VoiceRoom', `${userName}님의 보이스룸이 생성되었습니다.`);
-        
-        // 활성 보이스룸 맵에 추가
-        activeVoiceRooms.set(voiceChannel.id, {
-          ownerId: member.id,
-          createdAt: Date.now(),
-          type: 'default'
-        });
-        
-        // 사용자를 새 채널로 이동
-        await member.voice.setChannel(voiceChannel);
-        
-        // DM으로 컨트롤 패널 전송
-        sendControlPanel(member.user, voiceChannel);
-      } catch (error) {
-        logger.error('VoiceRoom', `음성 채널 생성 중 오류 발생: ${error.message}`);
+  }
+  
+  /**
+   * 커스텀 음성 채널 생성
+   * @param {VoiceState} voiceState 음성 상태
+   */
+  async function createCustomVoiceChannel(voiceState) {
+    try {
+      const { guild, member, channel } = voiceState;
+      const guildId = guild.id;
+      const settings = voiceData[guildId];
+      
+      // 카테고리 가져오기
+      const category = guild.channels.cache.get(settings.categoryId);
+      if (!category) {
+        logger.error('VoiceRoom', `카테고리를 찾을 수 없습니다: ${settings.categoryId}`);
+        return;
       }
+      
+      // 사용자 이름 (별명 우선)
+      const userName = member.nickname || member.user.username;
+      
+      // 채널 생성
+      const voiceChannel = await guild.channels.create({
+        name: `🔊 ${userName}님의 룸`,
+        type: ChannelType.GuildVoice,
+        parent: category.id,
+        permissionOverwrites: [
+          {
+            id: guild.id, // @everyone
+            allow: [PermissionFlagsBits.Connect, PermissionFlagsBits.Speak]
+          },
+          {
+            id: member.id, // 생성자
+            allow: [
+              PermissionFlagsBits.Connect, 
+              PermissionFlagsBits.Speak,
+              PermissionFlagsBits.MuteMembers,
+              PermissionFlagsBits.DeafenMembers,
+              PermissionFlagsBits.ManageChannels,
+              PermissionFlagsBits.MoveMembers
+            ]
+          }
+        ]
+      });
+      
+      logger.success('VoiceRoom', `${userName}님의 보이스룸이 생성되었습니다.`);
+      
+      // 활성 보이스룸 맵에 추가
+      activeVoiceRooms.set(voiceChannel.id, {
+        ownerId: member.id,
+        createdAt: Date.now(),
+        type: 'default'
+      });
+      
+      // 사용자를 새 채널로 이동
+      await member.voice.setChannel(voiceChannel);
+      
+      // DM으로 컨트롤 패널 전송
+      sendControlPanel(member.user, voiceChannel);
+    } catch (error) {
+      logger.error('VoiceRoom', `음성 채널 생성 중 오류 발생: ${error.message}`);
     }
-    
-    /**
-     * 컨트롤 패널 전송
-     * @param {User} user 사용자
-     * @param {VoiceChannel} voiceChannel 음성 채널
-     */
-    async function sendControlPanel(user, voiceChannel) {
-      try {
-        // 임베드 생성
-        const embed = new EmbedBuilder()
-          .setAuthor({ 
-            name: 'Aimbot.ad', 
-            iconURL: 'https://imgur.com/Sd8qK9c.gif' 
-          })
-          .setTitle('🎮 보이스룸 컨트롤 패널')
-          .setDescription('아래 메뉴를 통해 보이스룸을 관리할 수 있습니다.')
-          .addFields(
-            { name: '🔔 통화방 권한 확인', value: '현재 통화방에 대한 권한을 확인합니다.' },
-            { name: '🔕 통화방 권한 양도', value: '통화방 권한을 다른 사용자에게 양도합니다.' },
-            { name: '🔊 통화방 이름 변경', value: '통화방의 이름을 변경합니다. (🔊 아이콘은 유지됩니다)' }
-          )
-          .setColor('#5865F2')
-          .setThumbnail('https://i.imgur.com/6YToyEF.png')
-          .setFooter({
-            text: '🎷Blues',
-            iconURL: voiceChannel.guild.iconURL({ dynamic: true })
-          })
-          .setTimestamp();
-        
-        // 드롭다운 메뉴 생성
-        const roomTypeRow = new ActionRowBuilder()
-          .addComponents(
-            new StringSelectMenuBuilder()
-              .setCustomId(`voiceroom_type_${voiceChannel.id}`)
-              .setPlaceholder('통화방 유형을 선택해주세요')
-              .addOptions([
-                {
-                  label: '일반 대화',
-                  description: '일반적인 대화를 위한 채널로 설정합니다.',
-                  value: 'general',
-                  emoji: '🔋'
-                },
-                {
-                  label: '사냥 파티',
-                  description: '게임 사냥 파티를 위한 채널로 설정합니다.',
-                  value: 'hunting',
-                  emoji: '🏹'
-                },
-                {
-                  label: '교역 파티',
-                  description: '게임 교역을 위한 채널로 설정합니다.',
-                  value: 'trading',
-                  emoji: '🪙'
-                },
-                {
-                  label: '스터디룸',
-                  description: '공부를 위한 채널로 설정합니다.',
-                  value: 'study',
-                  emoji: '🎓'
-                },
-                {
-                  label: '뮤직룸',
-                  description: '음악 감상을 위한 채널로 설정합니다.',
-                  value: 'music',
-                  emoji: '🎶'
-                }
-              ])
-          );
-        
-        // 버튼 생성
-        const buttonRow = new ActionRowBuilder()
-          .addComponents(
-            new ButtonBuilder()
-              .setCustomId(`voiceroom_check_${voiceChannel.id}`)
-              .setLabel('권한 확인')
-              .setStyle(ButtonStyle.Primary)
-              .setEmoji('🔔'),
-            new ButtonBuilder()
-              .setCustomId(`voiceroom_transfer_${voiceChannel.id}`)
-              .setLabel('권한 양도')
-              .setStyle(ButtonStyle.Success)
-              .setEmoji('🔕'),
-            new ButtonBuilder()
-              .setCustomId(`voiceroom_rename_${voiceChannel.id}`)
-              .setLabel('이름 변경')
-              .setStyle(ButtonStyle.Secondary)
-              .setEmoji('🔊')
-          );
-        
-        // DM 전송
-        await user.send({ 
-          embeds: [embed], 
-          components: [roomTypeRow, buttonRow] 
-        });
-        
-        logger.info('VoiceRoom', `${user.tag}님에게 보이스룸 컨트롤 패널을 전송했습니다.`);
-      } catch (error) {
-        logger.error('VoiceRoom', `컨트롤 패널 전송 중 오류 발생: ${error.message}`);
-      }
-    }
-    
-    /**
-     * 빈 보이스룸 정리
-     * @param {VoiceState} oldState 이전 음성 상태
-     */
-    async function cleanupEmptyVoiceRooms(oldState) {
-      try {
-        // 채널이 없거나, 사용자가 퇴장하지 않았으면 무시
-        if (!oldState.channel) return;
-        
-        const channelId = oldState.channel.id;
-        
-        // 활성 보이스룸에 등록된 채널인지 확인
-        if (!activeVoiceRooms.has(channelId)) return;
-        
-        // 채널에 남은 인원이 있는지 확인
-        if (oldState.channel.members.size === 0) {
-          // 채널 삭제
-          await oldState.channel.delete();
-          
-          // 활성 보이스룸에서 제거
-          activeVoiceRooms.delete(channelId);
-          
-          logger.info('VoiceRoom', `빈 보이스룸을 삭제했습니다: ${oldState.channel.name}`);
-        }
-      } catch (error) {
-        logger.error('VoiceRoom', `보이스룸 정리 중 오류 발생: ${error.message}`);
-      }
-    }
-    
-    /**
-     * 슬래시 커맨드 처리
-     * @param {CommandInteraction} interaction 슬래시 커맨드 인터랙션
-     * @returns {boolean} 처리 성공 여부
-     */
-    async function handleCommands(interaction) {
-      if (!interaction.isCommand()) return false;
-      
-      const { commandName, options, guildId } = interaction;
-      
-      // 보이스룸 관련 명령어가 아니면 무시
-      if (commandName !== '보이스룸') return false;
-      
-      try {
-        const subcommand = options.getSubcommand();
-        
-        // 서버 설정 초기화
-        if (!voiceData[guildId]) {
-          voiceData[guildId] = {
-            categoryId: null,
-            lobbyId: null
-          };
-        }
-        
-        if (subcommand === '카테고리지정') {
-          const category = options.getChannel('카테고리');
-          
-          voiceData[guildId].categoryId = category.id;
-          saveVoiceData();
-          
-          await interaction.reply({
-            content: `✅ 보이스룸 카테고리가 \`${category.name}\`으로 설정되었습니다.`,
-            ephemeral: true
-          });
-          
-          logger.info('VoiceRoom', `서버 ${guildId}의 보이스룸 카테고리가 '${category.name}'으로 설정되었습니다.`);
-          return true;
-        }
-        
-        if (subcommand === '통화방지정') {
-          const channel = options.getChannel('채널');
-          
-          voiceData[guildId].lobbyId = channel.id;
-          saveVoiceData();
-          
-          await interaction.reply({
-            content: `✅ 보이스룸 생성 채널이 \`${channel.name}\`으로 설정되었습니다.`,
-            ephemeral: true
-          });
-          
-          logger.info('VoiceRoom', `서버 ${guildId}의 보이스룸 생성 채널이 '${channel.name}'으로 설정되었습니다.`);
-          return true;
-        }
-        
-        if (subcommand === '설정확인') {
-          const settings = voiceData[guildId];
-          const categoryName = settings.categoryId 
-            ? interaction.guild.channels.cache.get(settings.categoryId)?.name || '없음'
-            : '설정되지 않음';
-            
-          const lobbyName = settings.lobbyId
-            ? interaction.guild.channels.cache.get(settings.lobbyId)?.name || '없음'
-            : '설정되지 않음';
-          
-          // 임베드 생성
-          const embed = new EmbedBuilder()
-            .setAuthor({ 
-              name: 'Aimbot.ad', 
-              iconURL: 'https://imgur.com/Sd8qK9c.gif' 
-            })
-            .setTitle('⚙️ 보이스룸 설정 확인')
-            .addFields(
-              { name: '카테고리', value: categoryName, inline: true },
-              { name: '통화방', value: lobbyName, inline: true }
-            )
-            .setColor('#5865F2')
-            .setFooter({
-              text: '🎷Blues',
-              iconURL: interaction.guild.iconURL({ dynamic: true })
-            })
-            .setTimestamp();
-          
-          await interaction.reply({
-            embeds: [embed],
-            ephemeral: true
-          });
-          
-          return true;
-        }
-        
-        return false;
-      } catch (error) {
-        logger.error('VoiceRoom', `명령어 처리 중 오류 발생: ${error.message}`);
-        
-        await interaction.reply({
-          content: `⚠️ 명령어 처리 중 오류가 발생했습니다: ${error.message}`,
-          ephemeral: true
-        }).catch(() => {});
-        
-        return true;
-      }
-    }
-    
-    /**
-     * 버튼 인터랙션 처리
-     * @param {ButtonInteraction} interaction 버튼 인터랙션
-     * @returns {boolean} 처리 성공 여부
-     */
-    async function handleButtons(interaction) {
-      if (!interaction.isButton()) return false;
-      
-      const { customId, user } = interaction;
-      
-      // 보이스룸 관련 버튼이 아니면 무시
-      if (!customId.startsWith('voiceroom_')) return false;
-      
-      try {
-        // 커스텀 ID 파싱 (형식: voiceroom_action_channelId)
-        const [, action, channelId] = customId.split('_');
-        
-        // 채널 가져오기
-        const channel = client.channels.cache.get(channelId);
-        
-        // 채널이 존재하지 않거나 권한이 없는 경우
-        if (!channel) {
-          await interaction.reply({
-            content: '⚠️ 해당 보이스룸이 더 이상 존재하지 않습니다.',
-            ephemeral: true
-          });
-          return true;
-        }
-        
-        // 보이스룸 정보 가져오기
-        const voiceRoomInfo = activeVoiceRooms.get(channelId);
-        
-        // 정보가 없거나 소유자가 아닌 경우
-        if (!voiceRoomInfo || voiceRoomInfo.ownerId !== user.id) {
-          await interaction.reply({
-            content: '⚠️ 이 보이스룸에 대한 권한이 없습니다.',
-            ephemeral: true
-          });
-          return true;
-        }
-        
-        // 권한 확인
-        if (action === 'check') {
-          await handlePermissionCheck(interaction, channel);
-          return true;
-        }
-        
-        // 권한 양도
-        if (action === 'transfer') {
-          await handlePermissionTransfer(interaction, channel);
-          return true;
-        }
-        
-        // 이름 변경
-        if (action === 'rename') {
-          await handleRename(interaction, channel);
-          return true;
-        }
-        
-        return false;
-      } catch (error) {
-        logger.error('VoiceRoom', `버튼 처리 중 오류 발생: ${error.message}`);
-        
-        await interaction.reply({
-          content: `⚠️ 버튼 처리 중 오류가 발생했습니다: ${error.message}`,
-          ephemeral: true
-        }).catch(() => {});
-        
-        return true;
-      }
-    }
-    
-    /**
-     * 권한 확인 처리
-     * @param {ButtonInteraction} interaction 버튼 인터랙션
-     * @param {VoiceChannel} channel 음성 채널
-     */
-    async function handlePermissionCheck(interaction, channel) {
-      // 현재 채널 멤버 목록
-      const members = channel.members.map(member => 
-        `${member.id === activeVoiceRooms.get(channel.id).ownerId ? '👑' : '👤'} ${member.user.tag}`
-      ).join('\n');
-      
+  }
+  
+  /**
+   * 컨트롤 패널 전송
+   * @param {User} user 사용자
+   * @param {VoiceChannel} voiceChannel 음성 채널
+   */
+  async function sendControlPanel(user, voiceChannel) {
+    try {
       // 임베드 생성
       const embed = new EmbedBuilder()
         .setAuthor({ 
           name: 'Aimbot.ad', 
           iconURL: 'https://imgur.com/Sd8qK9c.gif' 
         })
-        .setTitle('🔔 보이스룸 권한 확인')
-        .setDescription('현재 보이스룸에 대한 권한 정보입니다.')
+        .setTitle('🎮 보이스룸 컨트롤 패널')
+        .setDescription('아래 메뉴를 통해 보이스룸을 관리할 수 있습니다.')
         .addFields(
-          { name: '채널 이름', value: channel.name },
-          { name: '소유자', value: `<@${activeVoiceRooms.get(channel.id).ownerId}>` },
-          { name: '현재 멤버', value: members || '없음' }
+          { name: '🔔 통화방 권한 확인', value: '현재 통화방에 대한 권한을 확인합니다.' },
+          { name: '🔕 통화방 권한 양도', value: '통화방 권한을 다른 사용자에게 양도합니다.' },
+          { name: '🔊 통화방 이름 변경', value: '통화방의 이름을 변경합니다. (🔊 아이콘은 유지됩니다)' }
         )
         .setColor('#5865F2')
+        .setThumbnail('https://i.imgur.com/6YToyEF.png')
         .setFooter({
           text: '🎷Blues',
-          iconURL: channel.guild.iconURL({ dynamic: true })
+          iconURL: voiceChannel.guild.iconURL({ dynamic: true })
         })
         .setTimestamp();
       
-      await interaction.reply({
-        embeds: [embed],
-        ephemeral: true
-      });
-    }
-    
-    /**
-     * 권한 양도 처리
-     * @param {ButtonInteraction} interaction 버튼 인터랙션
-     * @param {VoiceChannel} channel 음성 채널
-     */
-    async function handlePermissionTransfer(interaction, channel) {
-      // 채널 멤버 목록 (소유자 제외)
-      const options = channel.members
-        .filter(member => member.id !== interaction.user.id)
-        .map(member => ({
-          label: member.user.tag,
-          value: member.id,
-          description: `ID: ${member.id}`
-        }));
-      
-      // 채널에 다른 멤버가 없는 경우
-      if (options.length === 0) {
-        await interaction.reply({
-          content: '⚠️ 권한을 양도할 다른 멤버가 없습니다.',
-          ephemeral: true
-        });
-        return;
-      }
-      
-      // 선택 메뉴 생성
-      const row = new ActionRowBuilder()
+      // 드롭다운 메뉴 생성
+      const roomTypeRow = new ActionRowBuilder()
         .addComponents(
           new StringSelectMenuBuilder()
-            .setCustomId(`voiceroom_transfer_select_${channel.id}`)
-            .setPlaceholder('권한을 양도할 멤버를 선택해주세요')
-            .addOptions(options)
+            .setCustomId(`voiceroom_type_${voiceChannel.id}`)
+            .setPlaceholder('통화방 유형을 선택해주세요')
+            .addOptions([
+              {
+                label: '일반 대화',
+                description: '일반적인 대화를 위한 채널로 설정합니다.',
+                value: 'general',
+                emoji: '🔋'
+              },
+              {
+                label: '사냥 파티',
+                description: '게임 사냥 파티를 위한 채널로 설정합니다.',
+                value: 'hunting',
+                emoji: '🏹'
+              },
+              {
+                label: '교역 파티',
+                description: '게임 교역을 위한 채널로 설정합니다.',
+                value: 'trading',
+                emoji: '🪙'
+              },
+              {
+                label: '스터디룸',
+                description: '공부를 위한 채널로 설정합니다.',
+                value: 'study',
+                emoji: '🎓'
+              },
+              {
+                label: '뮤직룸',
+                description: '음악 감상을 위한 채널로 설정합니다.',
+                value: 'music',
+                emoji: '🎶'
+              }
+            ])
         );
       
-      await interaction.reply({
-        content: '👑 보이스룸 권한을 양도할 멤버를 선택해주세요:',
-        components: [row],
-        ephemeral: true
+      // 버튼 생성
+      const buttonRow = new ActionRowBuilder()
+        .addComponents(
+          new ButtonBuilder()
+            .setCustomId(`voiceroom_check_${voiceChannel.id}`)
+            .setLabel('권한 확인')
+            .setStyle(ButtonStyle.Primary)
+            .setEmoji('🔔'),
+          new ButtonBuilder()
+            .setCustomId(`voiceroom_transfer_${voiceChannel.id}`)
+            .setLabel('권한 양도')
+            .setStyle(ButtonStyle.Success)
+            .setEmoji('🔕'),
+          new ButtonBuilder()
+            .setCustomId(`voiceroom_rename_${voiceChannel.id}`)
+            .setLabel('이름 변경')
+            .setStyle(ButtonStyle.Secondary)
+            .setEmoji('🔊')
+        );
+      
+      // DM 전송
+      await user.send({ 
+        embeds: [embed], 
+        components: [roomTypeRow, buttonRow] 
       });
+      
+      logger.info('VoiceRoom', `${user.tag}님에게 보이스룸 컨트롤 패널을 전송했습니다.`);
+    } catch (error) {
+      logger.error('VoiceRoom', `컨트롤 패널 전송 중 오류 발생: ${error.message}`);
     }
-    
-    /**
-     * 이름 변경 처리
-     * @param {ButtonInteraction} interaction 버튼 인터랙션
-     * @param {VoiceChannel} channel 음성 채널
-     */
-    async function handleRename(interaction, channel) {
-      // 모달로 구현 예정
-      await interaction.reply({
-        content: '⚙️ 이 기능은 나중에 구현될 예정입니다.',
-        ephemeral: true
-      });
+  }
+/**
+   * 빈 보이스룸 정리
+   * @param {VoiceState} oldState 이전 음성 상태
+   */
+async function cleanupEmptyVoiceRooms(oldState) {
+    try {
+      // 채널이 없거나, 사용자가 퇴장하지 않았으면 무시
+      if (!oldState.channel) return;
+      
+      const channelId = oldState.channel.id;
+      
+      // 활성 보이스룸에 등록된 채널인지 확인
+      if (!activeVoiceRooms.has(channelId)) return;
+      
+      // 채널에 남은 인원이 있는지 확인
+      if (oldState.channel.members.size === 0) {
+        // 채널 삭제
+        await oldState.channel.delete();
+        
+        // 활성 보이스룸에서 제거
+        activeVoiceRooms.delete(channelId);
+        
+        logger.info('VoiceRoom', `빈 보이스룸을 삭제했습니다: ${oldState.channel.name}`);
+      }
+    } catch (error) {
+      logger.error('VoiceRoom', `보이스룸 정리 중 오류 발생: ${error.message}`);
     }
+  }
+  
+  /**
+   * 슬래시 커맨드 처리
+   * @param {CommandInteraction} interaction 슬래시 커맨드 인터랙션
+   * @returns {boolean} 처리 성공 여부
+   */
+  async function handleCommands(interaction) {
+    if (!interaction.isCommand()) return false;
     
-    /**
-     * 선택 메뉴 처리
-     * @param {SelectMenuInteraction} interaction 선택 메뉴 인터랙션
-     * @returns {boolean} 처리 성공 여부
-     */
-    async function handleSelectMenus(interaction) {
-      if (!interaction.isStringSelectMenu()) return false;
+    const { commandName, options, guildId } = interaction;
+    
+    // 보이스룸 관련 명령어가 아니면 무시
+    if (commandName !== '보이스룸') return false;
+    
+    try {
+      const subcommand = options.getSubcommand();
       
-      const { customId, values, user } = interaction;
+      // 서버 설정 초기화
+      if (!voiceData[guildId]) {
+        voiceData[guildId] = {
+          categoryId: null,
+          lobbyId: null
+        };
+      }
       
-      // 보이스룸 관련 선택 메뉴가 아니면 무시
-      if (!customId.startsWith('voiceroom_')) return false;
-      
-      try {
-        // 커스텀 ID 파싱
-        const parts = customId.split('_');
-        const action = parts[1];
-        const channelId = parts[parts.length - 1];
+      if (subcommand === '카테고리지정') {
+        const category = options.getChannel('카테고리');
         
-        // 채널 가져오기
-        const channel = client.channels.cache.get(channelId);
-        
-        // 채널이 존재하지 않는 경우
-        if (!channel) {
-          await interaction.reply({
-            content: '⚠️ 해당 보이스룸이 더 이상 존재하지 않습니다.',
-            ephemeral: true
-          });
-          return true;
-        }
-        
-        // 보이스룸 타입 변경
-        if (action === 'type') {
-          await handleRoomTypeChange(interaction, channel, values[0]);
-          return true;
-        }
-        
-        // 권한 양도 선택
-        if (action === 'transfer' && parts[2] === 'select') {
-          await handlePermissionTransferSelect(interaction, channel, values[0]);
-          return true;
-        }
-        
-        return false;
-      } catch (error) {
-        logger.error('VoiceRoom', `선택 메뉴 처리 중 오류 발생: ${error.message}`);
+        voiceData[guildId].categoryId = category.id;
+        saveVoiceData();
         
         await interaction.reply({
-          content: `⚠️ 선택 메뉴 처리 중 오류가 발생했습니다: ${error.message}`,
+          content: `✅ 보이스룸 카테고리가 \`${category.name}\`으로 설정되었습니다.`,
           ephemeral: true
-        }).catch(() => {});
+        });
+        
+        logger.info('VoiceRoom', `서버 ${guildId}의 보이스룸 카테고리가 '${category.name}'으로 설정되었습니다.`);
+        return true;
+      }
+      
+      if (subcommand === '통화방지정') {
+        const channel = options.getChannel('채널');
+        
+        voiceData[guildId].lobbyId = channel.id;
+        saveVoiceData();
+        
+        await interaction.reply({
+          content: `✅ 보이스룸 생성 채널이 \`${channel.name}\`으로 설정되었습니다.`,
+          ephemeral: true
+        });
+        
+        logger.info('VoiceRoom', `서버 ${guildId}의 보이스룸 생성 채널이 '${channel.name}'으로 설정되었습니다.`);
+        return true;
+      }
+      
+      if (subcommand === '설정확인') {
+        const settings = voiceData[guildId];
+        const categoryName = settings && settings.categoryId 
+          ? interaction.guild.channels.cache.get(settings.categoryId)?.name || '찾을 수 없음'
+          : '설정되지 않음';
+          
+        const lobbyName = settings && settings.lobbyId
+          ? interaction.guild.channels.cache.get(settings.lobbyId)?.name || '찾을 수 없음'
+          : '설정되지 않음';
+        
+        // 임베드 생성
+        const embed = new EmbedBuilder()
+          .setAuthor({ 
+            name: 'Aimbot.ad', 
+            iconURL: 'https://imgur.com/Sd8qK9c.gif' 
+          })
+          .setTitle('⚙️ 보이스룸 설정 확인')
+          .addFields(
+            { name: '카테고리', value: categoryName, inline: true },
+            { name: '통화방', value: lobbyName, inline: true }
+          )
+          .setColor('#5865F2')
+          .setFooter({
+            text: '🎷Blues',
+            iconURL: interaction.guild.iconURL({ dynamic: true })
+          })
+          .setTimestamp();
+        
+        await interaction.reply({
+          embeds: [embed],
+          ephemeral: true
+        });
         
         return true;
       }
+      
+      return false;
+    } catch (error) {
+      logger.error('VoiceRoom', `명령어 처리 중 오류 발생: ${error.message}`);
+      
+      await interaction.reply({
+        content: `⚠️ 명령어 처리 중 오류가 발생했습니다: ${error.message}`,
+        ephemeral: true
+      }).catch(() => {});
+      
+      return true;
+    }
+  }
+/**
+   * 버튼 인터랙션 처리
+   * @param {ButtonInteraction} interaction 버튼 인터랙션
+   * @returns {boolean} 처리 성공 여부
+   */
+async function handleButtons(interaction) {
+    if (!interaction.isButton()) return false;
+    
+    const { customId, user } = interaction;
+    
+    // 보이스룸 관련 버튼이 아니면 무시
+    if (!customId.startsWith('voiceroom_')) return false;
+    
+    try {
+      // 커스텀 ID 파싱 (형식: voiceroom_action_channelId)
+      const [, action, channelId] = customId.split('_');
+      
+      // 채널 가져오기
+      const channel = client.channels.cache.get(channelId);
+      
+      // 채널이 존재하지 않거나 권한이 없는 경우
+      if (!channel) {
+        await interaction.reply({
+          content: '⚠️ 해당 보이스룸이 더 이상 존재하지 않습니다.',
+          ephemeral: true
+        });
+        return true;
+      }
+      
+      // 보이스룸 정보 가져오기
+      const voiceRoomInfo = activeVoiceRooms.get(channelId);
+      
+      // 정보가 없거나 소유자가 아닌 경우
+      if (!voiceRoomInfo || voiceRoomInfo.ownerId !== user.id) {
+        await interaction.reply({
+          content: '⚠️ 이 보이스룸에 대한 권한이 없습니다.',
+          ephemeral: true
+        });
+        return true;
+      }
+      
+      // 권한 확인
+      if (action === 'check') {
+        await handlePermissionCheck(interaction, channel);
+        return true;
+      }
+      
+      // 권한 양도
+      if (action === 'transfer') {
+        await handlePermissionTransfer(interaction, channel);
+        return true;
+      }
+      
+      // 이름 변경
+      if (action === 'rename') {
+        // voiceroomManager.js 모듈에 처리 위임
+        const voiceroomManager = client.modules.get('voiceroomManager');
+        if (voiceroomManager && typeof voiceroomManager.showRenameModal === 'function') {
+          await voiceroomManager.showRenameModal(interaction, channelId);
+        } else {
+          await interaction.reply({
+            content: '⚠️ 이름 변경 기능을 사용할 수 없습니다.',
+            ephemeral: true
+          });
+        }
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      logger.error('VoiceRoom', `버튼 처리 중 오류 발생: ${error.message}`);
+      
+      await interaction.reply({
+        content: `⚠️ 버튼 처리 중 오류가 발생했습니다: ${error.message}`,
+        ephemeral: true
+      }).catch(() => {});
+      
+      return true;
+    }
+  }
+  
+  /**
+   * 권한 확인 처리
+   * @param {ButtonInteraction} interaction 버튼 인터랙션
+   * @param {VoiceChannel} channel 음성 채널
+   */
+  async function handlePermissionCheck(interaction, channel) {
+    // 현재 채널 멤버 목록
+    const members = channel.members.map(member => 
+      `${member.id === activeVoiceRooms.get(channel.id).ownerId ? '👑' : '👤'} ${member.user.tag}`
+    ).join('\n') || '없음';
+    
+    // 임베드 생성
+    const embed = new EmbedBuilder()
+      .setAuthor({ 
+        name: 'Aimbot.ad', 
+        iconURL: 'https://imgur.com/Sd8qK9c.gif' 
+      })
+      .setTitle('🔔 보이스룸 권한 확인')
+      .setDescription('현재 보이스룸에 대한 권한 정보입니다.')
+      .addFields(
+        { name: '채널 이름', value: channel.name },
+        { name: '소유자', value: `<@${activeVoiceRooms.get(channel.id).ownerId}>` },
+        { name: '현재 멤버', value: members }
+      )
+      .setColor('#5865F2')
+      .setFooter({
+        text: '🎷Blues',
+        iconURL: channel.guild.iconURL({ dynamic: true })
+      })
+      .setTimestamp();
+    
+    await interaction.reply({
+      embeds: [embed],
+      ephemeral: true
+    });
+  }
+  
+  /**
+   * 권한 양도 처리
+   * @param {ButtonInteraction} interaction 버튼 인터랙션
+   * @param {VoiceChannel} channel 음성 채널
+   */
+  async function handlePermissionTransfer(interaction, channel) {
+    // 채널 멤버 목록 (소유자 제외)
+    const options = channel.members
+      .filter(member => member.id !== interaction.user.id)
+      .map(member => ({
+        label: member.user.tag,
+        value: member.id,
+        description: `ID: ${member.id}`
+      }));
+    
+    // 채널에 다른 멤버가 없는 경우
+    if (options.length === 0) {
+      await interaction.reply({
+        content: '⚠️ 권한을 양도할 다른 멤버가 없습니다.',
+        ephemeral: true
+      });
+      return;
     }
     
-    /**
+    // 선택 메뉴 생성
+    const row = new ActionRowBuilder()
+      .addComponents(
+        new StringSelectMenuBuilder()
+          .setCustomId(`voiceroom_transfer_select_${channel.id}`)
+          .setPlaceholder('권한을 양도할 멤버를 선택해주세요')
+          .addOptions(options)
+      );
+    
+    await interaction.reply({
+      content: '👑 보이스룸 권한을 양도할 멤버를 선택해주세요:',
+      components: [row],
+      ephemeral: true
+    });
+  }
+  
+  /**
+   * 선택 메뉴 처리
+   * @param {SelectMenuInteraction} interaction 선택 메뉴 인터랙션
+   * @returns {boolean} 처리 성공 여부
+   */
+  async function handleSelectMenus(interaction) {
+    if (!interaction.isStringSelectMenu()) return false;
+    
+    const { customId, values, user } = interaction;
+    
+    // 보이스룸 관련 선택 메뉴가 아니면 무시
+    if (!customId.startsWith('voiceroom_')) return false;
+    
+    try {
+      // 커스텀 ID 파싱
+      const parts = customId.split('_');
+      const action = parts[1];
+      const channelId = parts[parts.length - 1];
+      
+      // 채널 가져오기
+      const channel = client.channels.cache.get(channelId);
+      
+      // 채널이 존재하지 않는 경우
+      if (!channel) {
+        await interaction.reply({
+          content: '⚠️ 해당 보이스룸이 더 이상 존재하지 않습니다.',
+          ephemeral: true
+        });
+        return true;
+      }
+      
+      // 보이스룸 타입 변경
+      if (action === 'type') {
+        await handleRoomTypeChange(interaction, channel, values[0]);
+        return true;
+      }
+      
+      // 권한 양도 선택
+      if (action === 'transfer' && parts[2] === 'select') {
+        await handlePermissionTransferSelect(interaction, channel, values[0]);
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      logger.error('VoiceRoom', `선택 메뉴 처리 중 오류 발생: ${error.message}`);
+      
+      await interaction.reply({
+        content: `⚠️ 선택 메뉴 처리 중 오류가 발생했습니다: ${error.message}`,
+        ephemeral: true
+      }).catch(() => {});
+      
+      return true;
+    }
+  }
+/**
    * 방 타입 변경 처리
    * @param {SelectMenuInteraction} interaction 선택 메뉴 인터랙션
    * @param {VoiceChannel} channel 음성 채널
    * @param {string} type 방 타입
    */
-  async function handleRoomTypeChange(interaction, channel, type) {
+async function handleRoomTypeChange(interaction, channel, type) {
     try {
       const voiceRoomInfo = activeVoiceRooms.get(channel.id);
       
@@ -904,10 +897,18 @@ const {
     enabled: true,
     configurable: true,
     commands: ['보이스룸'],
-    slashCommands: commands,
+    slashCommands: slashCommands,
     handleCommands,
     handleButtons,
     handleSelectMenus,
-    handleModals
+    handleModals,
+    // 외부 참조를 위한 추가 메서드
+    isActiveVoiceRoom: (channelId) => activeVoiceRooms.has(channelId),
+    isVoiceRoomOwnedBy: (channelId, userId) => {
+      const info = activeVoiceRooms.get(channelId);
+      return info && info.ownerId === userId;
+    },
+    getVoiceRoomInfo: (channelId) => activeVoiceRooms.get(channelId),
+    removeVoiceRoom: (channelId) => activeVoiceRooms.delete(channelId)
   };
 };

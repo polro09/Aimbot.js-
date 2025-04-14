@@ -14148,3 +14148,1220 @@ Require stack:
 [2025-04-14 22:34:40] [WEB] [Performance] GET /api/status - 200 - 1ms
 [2025-04-14 22:35:40] [WEB] [HTTP] GET /api/status - ::1
 [2025-04-14 22:35:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:36:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:36:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:37:06] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 22:37:06] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 22:37:06] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 22:37:06] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 22:37:06] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 22:37:06] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 22:37:06] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 22:37:06] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 22:37:06] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 22:37:06] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:37:06] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 22:37:06] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 22:37:06] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:37:06] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 22:37:06] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 22:37:06] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 22:37:06] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 22:37:06] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 22:37:06] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 22:37:06] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 22:37:06] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 22:37:06] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 22:37:06] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 22:37:06] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 22:37:07] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 22:37:07] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 22:37:07] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 22:37:08] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 22:37:08] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 22:37:08] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 22:37:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:37:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:38:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:38:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:39:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:39:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 22:40:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:40:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 22:41:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:41:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 22:42:06] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 22:42:07] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 22:42:07] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 22:42:07] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 22:42:07] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 22:42:07] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 22:42:07] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 22:42:07] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 22:42:07] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 22:42:07] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:42:07] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 22:42:07] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 22:42:07] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:42:07] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 22:42:07] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 22:42:07] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 22:42:07] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 22:42:07] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 22:42:07] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 22:42:07] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 22:42:07] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 22:42:07] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 22:42:07] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 22:42:07] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 22:42:08] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 22:42:08] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 22:42:08] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 22:42:08] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 22:42:08] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 22:42:08] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 22:42:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:42:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 22:43:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:43:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 22:44:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:44:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:45:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:45:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:46:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:46:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 22:47:07] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 22:47:07] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 22:47:07] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 22:47:07] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 22:47:07] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 22:47:07] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 22:47:07] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 22:47:07] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 22:47:07] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 22:47:07] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:47:07] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 22:47:07] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 22:47:07] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:47:07] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 22:47:07] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 22:47:07] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 22:47:07] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 22:47:07] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 22:47:07] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 22:47:07] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 22:47:07] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 22:47:07] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 22:47:07] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 22:47:07] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 22:47:08] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 22:47:08] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 22:47:08] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 22:47:09] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 22:47:09] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 22:47:09] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 22:47:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:47:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 22:48:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:48:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:49:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:49:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 22:50:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:50:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 22:51:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:51:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:52:07] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 22:52:08] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 22:52:08] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 22:52:08] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 22:52:08] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 22:52:08] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 22:52:08] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 22:52:08] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 22:52:08] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 22:52:08] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:52:08] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 22:52:08] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 22:52:08] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:52:08] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 22:52:08] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 22:52:08] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 22:52:08] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 22:52:08] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 22:52:08] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 22:52:08] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 22:52:08] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 22:52:08] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 22:52:08] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 22:52:08] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 22:52:09] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 22:52:09] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 22:52:09] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 22:52:09] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 22:52:09] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 22:52:09] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 22:52:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:52:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 22:53:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:53:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:54:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:54:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:55:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:55:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 22:56:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:56:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 22:57:08] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 22:57:08] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 22:57:08] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 22:57:08] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 22:57:08] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 22:57:08] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 22:57:08] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 22:57:08] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 22:57:08] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 22:57:08] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:57:08] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 22:57:08] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 22:57:08] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 22:57:08] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 22:57:08] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 22:57:08] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 22:57:08] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 22:57:08] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 22:57:08] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 22:57:08] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 22:57:08] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 22:57:08] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 22:57:08] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 22:57:08] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 22:57:09] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 22:57:09] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 22:57:09] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 22:57:10] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 22:57:10] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 22:57:10] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 22:57:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:57:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 22:58:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:58:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 22:59:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 22:59:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:00:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:00:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:01:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:01:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:02:08] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:02:09] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:02:09] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:02:09] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:02:09] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:02:09] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:02:09] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:02:09] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:02:09] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:02:09] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:02:09] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:02:09] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:02:09] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:02:09] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:02:09] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:02:09] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:02:09] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:02:09] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:02:09] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:02:09] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:02:09] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:02:09] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:02:09] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:02:09] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:02:10] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:02:10] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:02:10] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 23:02:10] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:02:10] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:02:10] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:02:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:02:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:03:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:03:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:04:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:04:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:05:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:05:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:06:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:06:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:07:09] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:07:09] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:07:09] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:07:09] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:07:09] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:07:09] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:07:09] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:07:09] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:07:09] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:07:09] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:07:09] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:07:09] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:07:09] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:07:09] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:07:09] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:07:09] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:07:09] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:07:09] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:07:09] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:07:09] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:07:09] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:07:09] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:07:09] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:07:09] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:07:10] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:07:10] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:07:10] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 23:07:10] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:07:11] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:07:11] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:07:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:07:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:08:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:08:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:09:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:09:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:10:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:10:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:11:24] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:11:24] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:11:31] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:11:31] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:11:41] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:11:41] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:11:51] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:11:51] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:12:01] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:12:01] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:12:09] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:12:09] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:12:09] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:12:09] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:12:09] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:12:09] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:12:09] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:12:09] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:12:09] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:12:09] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:12:09] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:12:09] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:12:09] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:12:09] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:12:09] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:12:09] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:12:09] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:12:09] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:12:09] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:12:09] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:12:09] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:12:09] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:12:09] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:12:09] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:12:09] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:12:09] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:12:09] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:12:09] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:12:10] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:12:10] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:12:10] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:12:10] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:12:10] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:12:10] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:12:10] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:12:10] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:12:10] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:12:12] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:12:12] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:12:12] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 23:12:12] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:12:12] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:12:12] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:12:12] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:12:12] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:12:21] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:12:21] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:12:31] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:12:31] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:12:41] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:12:41] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:12:51] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:12:51] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:13:01] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:13:01] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:13:11] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:13:11] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:13:21] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:13:21] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:13:31] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:13:31] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:13:41] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:13:41] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:13:51] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:13:51] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:14:01] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:14:01] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:14:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:14:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:15:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:15:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:16:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:16:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:17:09] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:17:10] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:17:10] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:17:10] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:17:10] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:17:10] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:17:10] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:17:10] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:17:10] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:17:10] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:17:10] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:17:10] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:17:10] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:17:10] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:17:10] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:17:10] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:17:10] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:17:10] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:17:10] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:17:10] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:17:10] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:17:10] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:17:10] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:17:10] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:17:11] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:17:11] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:17:11] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 23:17:11] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:17:11] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:17:11] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:17:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:17:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:18:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:18:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:19:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:19:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:20:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:20:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:21:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:21:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:22:10] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:22:10] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:22:10] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:22:10] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:22:10] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:22:10] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:22:10] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:22:10] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:22:10] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:22:10] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:22:10] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:22:10] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:22:10] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:22:10] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:22:10] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:22:10] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:22:10] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:22:10] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:22:10] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:22:10] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:22:10] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:22:10] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:22:10] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:22:10] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:22:12] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:22:12] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:22:12] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 23:22:12] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:22:13] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:22:13] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:22:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:22:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:23:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:23:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:24:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:24:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:25:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:25:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:26:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:26:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:27:10] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:27:11] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:27:11] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:27:11] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:27:11] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:27:11] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:27:11] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:27:11] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:27:11] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:27:11] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:27:11] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:27:11] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:27:11] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:27:11] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:27:11] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:27:11] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:27:11] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:27:11] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:27:11] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:27:11] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:27:11] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:27:11] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:27:11] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:27:11] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:27:12] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:27:12] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:27:12] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (8개)
+[2025-04-14 23:27:12] [SUCCESS] [CommandManager] 8개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:27:12] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:27:12] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:27:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:27:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:28:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:28:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:29:36] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:29:36] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:29:36] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:29:36] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:29:36] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:29:36] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:29:36] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:29:36] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:29:36] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:29:36] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:29:36] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:29:36] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:29:36] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:29:36] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:29:36] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:29:36] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:29:36] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:29:36] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:29:36] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:29:37] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:29:37] [WARNING] [CommandManager] '도움말' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:29:37] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:29:37] [WARNING] [CommandManager] '봇정보' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:29:37] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:29:37] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:29:37] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:29:37] [WARNING] [CommandManager] '가입신청서' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:29:37] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:29:37] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:29:37] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:29:37] [WARNING] [CommandManager] '티켓' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:29:37] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:29:37] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:29:37] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:29:37] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:29:37] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:29:37] [SUCCESS] [CommandManager] '보이스룸' 명령어가 등록되었습니다.
+[2025-04-14 23:29:37] [MODULE] [CommandManager] voiceroom 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:29:37] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:29:37] [WARNING] [CommandManager] '환영채널설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:29:37] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:29:37] [WARNING] [CommandManager] '환영메시지설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:29:37] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:29:37] [WARNING] [CommandManager] '환영메시지' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:29:37] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:29:37] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:29:37] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:29:37] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:29:37] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (9개)
+[2025-04-14 23:29:37] [INFO] [CommandManager] 배포할 명령어 목록: 슬래시, 도움말, 봇정보, 가입신청서, 티켓, 보이스룸, 환영채널설정, 환영메시지설정, 환영메시지
+[2025-04-14 23:29:38] [SUCCESS] [CommandManager] 9개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:29:38] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:29:38] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:29:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:29:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:30:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:30:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:31:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:31:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:32:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:32:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:33:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:33:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:34:14] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:34:14] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:34:14] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:34:14] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:34:14] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:34:14] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:34:14] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:34:14] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:34:14] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:34:14] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:34:14] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:34:14] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:34:14] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:34:14] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:34:14] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:34:14] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:34:14] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:34:14] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:34:14] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:34:14] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:34:14] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:34:14] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:34:14] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:34:15] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:34:15] [WARNING] [CommandManager] '도움말' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:34:15] [WARNING] [CommandManager] '봇정보' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:34:15] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:34:15] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:34:15] [WARNING] [CommandManager] '가입신청서' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:34:15] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:34:15] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:34:15] [WARNING] [CommandManager] '티켓' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:34:15] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:34:15] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:34:15] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:34:15] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] '보이스룸' 명령어가 등록되었습니다.
+[2025-04-14 23:34:15] [MODULE] [CommandManager] voiceroom 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:34:15] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:34:15] [WARNING] [CommandManager] '환영채널설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:34:15] [WARNING] [CommandManager] '환영메시지설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:34:15] [WARNING] [CommandManager] '환영메시지' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:34:15] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:34:15] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:34:15] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (9개)
+[2025-04-14 23:34:15] [INFO] [CommandManager] 배포할 명령어 목록: 슬래시, 도움말, 봇정보, 가입신청서, 티켓, 보이스룸, 환영채널설정, 환영메시지설정, 환영메시지
+[2025-04-14 23:34:15] [SUCCESS] [CommandManager] 9개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:34:15] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:34:15] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:34:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:34:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:35:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:35:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:36:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:36:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:37:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:37:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:38:29] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:38:29] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:38:29] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:38:29] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:38:29] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:38:29] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:38:29] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:38:29] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:38:29] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:38:29] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:38:29] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:38:29] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:38:29] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:38:29] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:38:29] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:38:29] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:38:29] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:38:29] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:38:29] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:38:29] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:38:29] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:38:29] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:38:29] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:38:30] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:38:30] [WARNING] [CommandManager] '도움말' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:38:30] [WARNING] [CommandManager] '봇정보' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:38:30] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:38:30] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:38:30] [WARNING] [CommandManager] '가입신청서' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:38:30] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:38:30] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:38:30] [WARNING] [CommandManager] '티켓' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:38:30] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:38:30] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:38:30] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:38:30] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] '보이스룸' 명령어가 등록되었습니다.
+[2025-04-14 23:38:30] [MODULE] [CommandManager] voiceroom 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:38:30] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:38:30] [WARNING] [CommandManager] '환영채널설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:38:30] [WARNING] [CommandManager] '환영메시지설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:38:30] [WARNING] [CommandManager] '환영메시지' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:38:30] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:38:30] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:38:30] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (9개)
+[2025-04-14 23:38:30] [INFO] [CommandManager] 배포할 명령어 목록: 슬래시, 도움말, 봇정보, 가입신청서, 티켓, 보이스룸, 환영채널설정, 환영메시지설정, 환영메시지
+[2025-04-14 23:38:30] [SUCCESS] [CommandManager] 9개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:38:31] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:38:31] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:38:32] [SUCCESS] [VoiceRoomManager] 보이스룸 모듈과 성공적으로 연결되었습니다.
+[2025-04-14 23:38:33] [WARNING] [VoiceRoomManager] 보이스룸 모듈을 찾을 수 없습니다.
+[2025-04-14 23:38:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:38:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:39:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:39:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:40:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:40:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:41:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:41:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:42:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:42:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:43:29] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:43:29] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:43:29] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:43:29] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:43:29] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:43:29] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:43:29] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:43:29] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:43:29] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:43:29] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:43:29] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:43:29] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:43:29] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:43:29] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:43:29] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:43:29] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:43:29] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:43:29] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:43:29] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:43:29] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:43:29] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:43:29] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:43:29] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:43:29] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:43:31] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:43:31] [WARNING] [CommandManager] '도움말' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:43:31] [WARNING] [CommandManager] '봇정보' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:43:31] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:43:31] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:43:31] [WARNING] [CommandManager] '가입신청서' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:43:31] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:43:31] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:43:31] [WARNING] [CommandManager] '티켓' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:43:31] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:43:31] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:43:31] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:43:31] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] '보이스룸' 명령어가 등록되었습니다.
+[2025-04-14 23:43:31] [MODULE] [CommandManager] voiceroom 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:43:31] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:43:31] [WARNING] [CommandManager] '환영채널설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:43:31] [WARNING] [CommandManager] '환영메시지설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:43:31] [WARNING] [CommandManager] '환영메시지' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:43:31] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:43:31] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:43:31] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (9개)
+[2025-04-14 23:43:31] [INFO] [CommandManager] 배포할 명령어 목록: 슬래시, 도움말, 봇정보, 가입신청서, 티켓, 보이스룸, 환영채널설정, 환영메시지설정, 환영메시지
+[2025-04-14 23:43:31] [SUCCESS] [CommandManager] 9개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:43:31] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:43:31] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:43:32] [SUCCESS] [VoiceRoomManager] 보이스룸 모듈과 성공적으로 연결되었습니다.
+[2025-04-14 23:43:34] [WARNING] [VoiceRoomManager] 보이스룸 모듈을 찾을 수 없습니다.
+[2025-04-14 23:43:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:43:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:44:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:44:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:45:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:45:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:46:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:46:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:47:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:47:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:48:29] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:48:30] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:48:30] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:48:30] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:48:30] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:48:30] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:48:30] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:48:30] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:48:30] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:48:30] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:48:30] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:48:30] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:48:30] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:48:30] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:48:30] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:48:30] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:48:30] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:48:30] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:48:30] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:48:30] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:48:30] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:48:30] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:48:30] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:48:30] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:48:31] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:48:31] [WARNING] [CommandManager] '도움말' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:48:31] [WARNING] [CommandManager] '봇정보' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:48:31] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:48:31] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:48:31] [WARNING] [CommandManager] '가입신청서' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:48:31] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:48:31] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:48:31] [WARNING] [CommandManager] '티켓' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:48:31] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:48:31] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:48:31] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:48:31] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] '보이스룸' 명령어가 등록되었습니다.
+[2025-04-14 23:48:31] [MODULE] [CommandManager] voiceroom 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:48:31] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:48:31] [WARNING] [CommandManager] '환영채널설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:48:31] [WARNING] [CommandManager] '환영메시지설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:48:31] [WARNING] [CommandManager] '환영메시지' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:48:31] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:48:31] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:48:31] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (9개)
+[2025-04-14 23:48:31] [INFO] [CommandManager] 배포할 명령어 목록: 슬래시, 도움말, 봇정보, 가입신청서, 티켓, 보이스룸, 환영채널설정, 환영메시지설정, 환영메시지
+[2025-04-14 23:48:31] [SUCCESS] [CommandManager] 9개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:48:31] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:48:31] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:48:33] [SUCCESS] [VoiceRoomManager] 보이스룸 모듈과 성공적으로 연결되었습니다.
+[2025-04-14 23:48:34] [WARNING] [VoiceRoomManager] 보이스룸 모듈을 찾을 수 없습니다.
+[2025-04-14 23:48:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:48:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:49:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:49:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:50:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:50:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:51:26] [WARNING] [welcome] 설정된 환영 채널을 찾을 수 없습니다.
+[2025-04-14 23:51:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:51:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:52:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:52:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:53:30] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:53:30] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:53:30] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:53:30] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:53:30] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:53:30] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:53:30] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:53:30] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:53:30] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:53:30] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:53:30] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:53:30] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:53:30] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:53:30] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:53:30] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:53:30] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:53:30] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:53:30] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:53:30] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:53:30] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:53:30] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:53:30] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:53:30] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:53:30] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:53:31] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:53:31] [WARNING] [CommandManager] '도움말' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:53:31] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:53:31] [WARNING] [CommandManager] '봇정보' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:53:31] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:53:31] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:53:31] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:53:31] [WARNING] [CommandManager] '가입신청서' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:53:31] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:53:31] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:53:31] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:53:31] [WARNING] [CommandManager] '티켓' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:53:31] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:53:31] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:53:31] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:53:31] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:53:31] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:53:31] [SUCCESS] [CommandManager] '보이스룸' 명령어가 등록되었습니다.
+[2025-04-14 23:53:31] [MODULE] [CommandManager] voiceroom 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:53:31] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:53:31] [WARNING] [CommandManager] '환영채널설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:53:31] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:53:31] [WARNING] [CommandManager] '환영메시지설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:53:31] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:53:31] [WARNING] [CommandManager] '환영메시지' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:53:31] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:53:31] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:53:31] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:53:31] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:53:31] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (9개)
+[2025-04-14 23:53:31] [INFO] [CommandManager] 배포할 명령어 목록: 슬래시, 도움말, 봇정보, 가입신청서, 티켓, 보이스룸, 환영채널설정, 환영메시지설정, 환영메시지
+[2025-04-14 23:53:32] [SUCCESS] [CommandManager] 9개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:53:32] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:53:32] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:53:33] [SUCCESS] [VoiceRoomManager] 보이스룸 모듈과 성공적으로 연결되었습니다.
+[2025-04-14 23:53:34] [WARNING] [VoiceRoomManager] 보이스룸 모듈을 찾을 수 없습니다.
+[2025-04-14 23:53:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:53:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:54:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:54:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:55:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:55:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:56:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:56:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-14 23:57:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:57:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-14 23:58:30] [INFO] [Config] 설정이 저장되었습니다.
+[2025-04-14 23:58:31] [INFO] [Config] 봇 설정이 로드되었습니다.
+[2025-04-14 23:58:31] [SYSTEM] [Bot] 봇을 시작합니다...
+[2025-04-14 23:58:31] [SUCCESS] [CommandManager] '슬래시' 명령어가 등록되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [CommandManager] 슬래시 명령어 동기화 명령어가 등록되었습니다.
+[2025-04-14 23:58:31] [SYSTEM] [Loader] 모듈 로딩 중...
+[2025-04-14 23:58:31] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:58:31] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:58:31] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:58:31] [MODULE] [Loader] 'help' 모듈이 로드되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [help] 도움말 모듈이 활성화되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:58:31] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:58:31] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:58:31] [MODULE] [Loader] 'registration' 모듈이 로드되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [registration] 가입 신청서 모듈이 활성화되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:58:31] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:58:31] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:58:31] [MODULE] [Loader] 'ticket' 모듈이 로드되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [ticket] 티켓 모듈 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [ticket] 티켓 시스템 모듈이 활성화되었습니다.
+[2025-04-14 23:58:31] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:58:31] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:58:31] [MODULE] [Loader] 'voiceroom' 모듈이 로드되었습니다.
+[2025-04-14 23:58:31] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:58:31] [MODULE] [Loader] 'voiceroomManager' 모듈이 로드되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:58:31] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:58:31] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:58:31] [MODULE] [Loader] 'welcome' 모듈이 로드되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [welcome] 이벤트 리스너가 등록되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [welcome] 웰컴 모듈이 활성화되었습니다.
+[2025-04-14 23:58:31] [SUCCESS] [Loader] 6개 모듈이 성공적으로 로드되었습니다. 
+[2025-04-14 23:58:32] [SUCCESS] [Bot] 봇이 준비되었습니다. 로그인: 🜙Aimbot.ad#2816
+[2025-04-14 23:58:32] [WARNING] [CommandManager] '도움말' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:58:32] [SUCCESS] [CommandManager] '도움말' 명령어가 등록되었습니다.
+[2025-04-14 23:58:32] [WARNING] [CommandManager] '봇정보' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:58:32] [SUCCESS] [CommandManager] '봇정보' 명령어가 등록되었습니다.
+[2025-04-14 23:58:32] [MODULE] [CommandManager] help 모듈에서 2개 명령어를 등록했습니다.
+[2025-04-14 23:58:32] [MODULE] [help] 도움말 모듈이 초기화되었습니다.
+[2025-04-14 23:58:32] [WARNING] [CommandManager] '가입신청서' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:58:32] [SUCCESS] [CommandManager] '가입신청서' 명령어가 등록되었습니다.
+[2025-04-14 23:58:32] [MODULE] [CommandManager] registration 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:58:32] [MODULE] [registration] 가입 신청서 모듈이 초기화되었습니다.
+[2025-04-14 23:58:32] [WARNING] [CommandManager] '티켓' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:58:32] [SUCCESS] [CommandManager] '티켓' 명령어가 등록되었습니다.
+[2025-04-14 23:58:32] [MODULE] [CommandManager] ticket 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:58:32] [MODULE] [ticket] 티켓 시스템 모듈이 초기화되었습니다.
+[2025-04-14 23:58:32] [INFO] [VoiceRoom] 보이스룸 데이터를 로드했습니다.
+[2025-04-14 23:58:32] [MODULE] [VoiceRoom] 보이스룸 모듈이 초기화되었습니다.
+[2025-04-14 23:58:32] [SUCCESS] [CommandManager] '보이스룸' 명령어가 등록되었습니다.
+[2025-04-14 23:58:32] [MODULE] [CommandManager] voiceroom 모듈에서 1개 명령어를 등록했습니다.
+[2025-04-14 23:58:32] [MODULE] [VoiceRoomManager] 보이스룸 관리 모듈이 초기화되었습니다.
+[2025-04-14 23:58:32] [WARNING] [CommandManager] '환영채널설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:58:32] [SUCCESS] [CommandManager] '환영채널설정' 명령어가 등록되었습니다.
+[2025-04-14 23:58:32] [WARNING] [CommandManager] '환영메시지설정' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:58:32] [SUCCESS] [CommandManager] '환영메시지설정' 명령어가 등록되었습니다.
+[2025-04-14 23:58:32] [WARNING] [CommandManager] '환영메시지' 명령어가 이미 존재합니다. 덮어쓰기합니다.
+[2025-04-14 23:58:32] [SUCCESS] [CommandManager] '환영메시지' 명령어가 등록되었습니다.
+[2025-04-14 23:58:32] [MODULE] [CommandManager] welcome 모듈에서 3개 명령어를 등록했습니다.
+[2025-04-14 23:58:32] [MODULE] [welcome] 웰컴 모듈이 초기화되었습니다.
+[2025-04-14 23:58:32] [SUCCESS] [CommandManager] 모든 모듈의 슬래시 커맨드가 로드되었습니다.
+[2025-04-14 23:58:32] [SYSTEM] [CommandManager] 슬래시 커맨드를 Discord API에 배포 중... (9개)
+[2025-04-14 23:58:32] [INFO] [CommandManager] 배포할 명령어 목록: 슬래시, 도움말, 봇정보, 가입신청서, 티켓, 보이스룸, 환영채널설정, 환영메시지설정, 환영메시지
+[2025-04-14 23:58:33] [SUCCESS] [CommandManager] 9개 슬래시 커맨드가 성공적으로 배포되었습니다.
+[2025-04-14 23:58:33] [WEB] [Server] 웹 서버가 초기화되었습니다.
+[2025-04-14 23:58:33] [SUCCESS] [WebServer] 웹 서버가 http://localhost:3000/ 에서 실행 중입니다.
+[2025-04-14 23:58:34] [SUCCESS] [VoiceRoomManager] 보이스룸 모듈과 성공적으로 연결되었습니다.
+[2025-04-14 23:58:35] [WARNING] [VoiceRoomManager] 보이스룸 모듈을 찾을 수 없습니다.
+[2025-04-14 23:58:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:58:40] [WEB] [Performance] GET /api/status - 200 - 2ms
+[2025-04-14 23:59:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-14 23:59:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-15 00:00:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-15 00:00:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-15 00:01:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-15 00:01:40] [WEB] [Performance] GET /api/status - 200 - 1ms
+[2025-04-15 00:02:40] [WEB] [HTTP] GET /api/status - ::1
+[2025-04-15 00:02:40] [WEB] [Performance] GET /api/status - 200 - 0ms
+[2025-04-15 00:03:31] [INFO] [Config] 설정이 저장되었습니다.

@@ -10,6 +10,7 @@ class CommandManager {
   constructor() {
     this.commands = [];
     this.rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
+    this.moduleCommands = new Map(); // 모듈별 명령어 저장
   }
 
   /**
@@ -41,6 +42,9 @@ class CommandManager {
       return this;
     }
 
+    // 모듈별 명령어 저장
+    this.moduleCommands.set(moduleName, commands);
+
     commands.forEach(command => {
       this.registerCommand(command);
     });
@@ -65,11 +69,25 @@ class CommandManager {
       for (const file of moduleFiles) {
         try {
           const modulePath = path.join(modulesPath, file);
-          const moduleData = require(modulePath);
+          // 캐시 제거하여 최신 코드 로드
+          delete require.cache[require.resolve(modulePath)];
+          const moduleExport = require(modulePath);
           
-          // 모듈에 슬래시 커맨드가 있는지 확인
-          if (moduleData.slashCommands && Array.isArray(moduleData.slashCommands)) {
-            this.registerModuleCommands(moduleData.name || file, moduleData.slashCommands);
+          // 더미 클라이언트로 모듈 초기화 - 명령어만 가져오기 위함
+          const dummyClient = { 
+            on: () => {}, 
+            modules: new Map(),
+            guilds: { cache: new Map() }
+          };
+          
+          const moduleInstance = moduleExport(dummyClient);
+          
+          // 모듈 객체에서 slashCommands 배열이 있는지 확인
+          if (moduleInstance && moduleInstance.slashCommands && Array.isArray(moduleInstance.slashCommands)) {
+            this.registerModuleCommands(moduleInstance.name || file.replace('.js', ''), moduleInstance.slashCommands);
+          } else if (moduleInstance && moduleInstance.commands && Array.isArray(moduleInstance.commands)) {
+            // 일부 모듈에서는 commands 배열로 명령어 이름만 제공함 - 실제 슬래시 커맨드는 다른 곳에 정의
+            logger.info('CommandManager', `'${moduleInstance.name || file}' 모듈에 commands 배열이 있지만 slashCommands가 없습니다.`);
           }
         } catch (error) {
           logger.error('CommandManager', `'${file}' 모듈의 명령어 로드 중 오류 발생: ${error.message}`);
@@ -99,6 +117,10 @@ class CommandManager {
       
       logger.system('CommandManager', `슬래시 커맨드를 Discord API에 배포 중... (${this.commands.length}개)`);
       
+      // 명령어 목록 기록
+      const commandNames = this.commands.map(cmd => cmd.name).join(', ');
+      logger.info('CommandManager', `배포할 명령어 목록: ${commandNames}`);
+      
       // 글로벌 커맨드 배포
       await this.rest.put(
         Routes.applicationCommands(process.env.CLIENT_ID),
@@ -111,6 +133,36 @@ class CommandManager {
       if (error.stack) {
         logger.error('CommandManager', `스택 트레이스: ${error.stack}`);
       }
+      
+      // 에러 세부정보 확인
+      if (error.rawError) {
+        logger.error('CommandManager', `API 에러 세부정보: ${JSON.stringify(error.rawError)}`);
+      }
+    }
+  }
+
+  /**
+   * 특정 서버에만 슬래시 커맨드를 배포합니다.
+   * @param {string} guildId 서버 ID
+   */
+  async deployCommandsToGuild(guildId) {
+    try {
+      if (this.commands.length === 0) {
+        logger.warn('CommandManager', '배포할 슬래시 커맨드가 없습니다.');
+        return;
+      }
+      
+      logger.system('CommandManager', `슬래시 커맨드를 서버(${guildId})에 배포 중... (${this.commands.length}개)`);
+      
+      // 서버 특정 커맨드 배포
+      await this.rest.put(
+        Routes.applicationGuildCommands(process.env.CLIENT_ID, guildId),
+        { body: this.commands }
+      );
+      
+      logger.success('CommandManager', `${this.commands.length}개 슬래시 커맨드가 서버(${guildId})에 성공적으로 배포되었습니다.`);
+    } catch (error) {
+      logger.error('CommandManager', `서버 슬래시 커맨드 배포 실패: ${error.message}`);
     }
   }
 
@@ -120,6 +172,15 @@ class CommandManager {
    */
   getAllCommands() {
     return this.commands;
+  }
+
+  /**
+   * 특정 모듈의 명령어들을 반환합니다.
+   * @param {string} moduleName 모듈 이름
+   * @returns {Array} 해당 모듈의 명령어 배열 또는 빈 배열
+   */
+  getModuleCommands(moduleName) {
+    return this.moduleCommands.get(moduleName) || [];
   }
 
   /**
@@ -144,21 +205,44 @@ class CommandManager {
     
     // 모듈 찾기
     for (const [name, module] of client.modules) {
-      if (module.commands && module.commands.includes(commandName) && typeof module.executeSlashCommand === 'function') {
-        try {
-          await module.executeSlashCommand(interaction, client);
-          return; // 명령어 처리 완료
-        } catch (error) {
-          logger.error('CommandManager', `'${name}' 모듈의 명령어 '${commandName}' 처리 중 오류 발생: ${error.message}`);
-          
-          // 사용자에게 오류 메시지
-          if (!interaction.replied && !interaction.deferred) {
-            await interaction.reply({
-              content: `명령어 처리 중 오류가 발생했습니다: ${error.message}`,
-              ephemeral: true
-            }).catch(() => {});
+      if ((module.commands && module.commands.includes(commandName)) ||
+          (this.moduleCommands.get(name) && this.moduleCommands.get(name).some(cmd => cmd.name === commandName))) {
+        
+        if (typeof module.handleCommands === 'function') {
+          try {
+            const handled = await module.handleCommands(interaction);
+            if (handled) {
+              logger.success('CommandManager', `'${name}' 모듈이 '${commandName}' 명령어를 성공적으로 처리했습니다.`);
+              return; // 명령어 처리 완료
+            }
+          } catch (error) {
+            logger.error('CommandManager', `'${name}' 모듈의 명령어 '${commandName}' 처리 중 오류 발생: ${error.message}`);
+            
+            // 사용자에게 오류 메시지
+            if (!interaction.replied && !interaction.deferred) {
+              await interaction.reply({
+                content: `명령어 처리 중 오류가 발생했습니다: ${error.message}`,
+                ephemeral: true
+              }).catch(() => {});
+            }
+            return;
           }
-          return;
+        } else if (typeof module.executeSlashCommand === 'function') {
+          try {
+            await module.executeSlashCommand(interaction, client);
+            return; // 명령어 처리 완료
+          } catch (error) {
+            logger.error('CommandManager', `'${name}' 모듈의 명령어 '${commandName}' 처리 중 오류 발생: ${error.message}`);
+            
+            // 사용자에게 오류 메시지
+            if (!interaction.replied && !interaction.deferred) {
+              await interaction.reply({
+                content: `명령어 처리 중 오류가 발생했습니다: ${error.message}`,
+                ephemeral: true
+              }).catch(() => {});
+            }
+            return;
+          }
         }
       }
     }
@@ -214,6 +298,54 @@ class CommandManager {
     // 슬래시 동기화 명령어 추가
     this.createSyncCommand();
     return this;
+  }
+  
+  /**
+   * 모듈 커맨드 리로드
+   * @param {string} moduleName 모듈 이름
+   */
+  reloadModuleCommands(moduleName) {
+    try {
+      const modulePath = path.join(__dirname, 'modules', `${moduleName}.js`);
+      if (!fs.existsSync(modulePath)) {
+        logger.error('CommandManager', `'${moduleName}' 모듈 파일을 찾을 수 없습니다.`);
+        return false;
+      }
+      
+      // 캐시 제거하여 최신 코드 로드
+      delete require.cache[require.resolve(modulePath)];
+      const moduleExport = require(modulePath);
+      
+      // 더미 클라이언트로 모듈 초기화
+      const dummyClient = { 
+        on: () => {}, 
+        modules: new Map(),
+        guilds: { cache: new Map() }
+      };
+      
+      const moduleInstance = moduleExport(dummyClient);
+      
+      // 기존 명령어 제거
+      if (this.moduleCommands.has(moduleName)) {
+        const oldCommands = this.moduleCommands.get(moduleName);
+        oldCommands.forEach(cmd => {
+          this.commands = this.commands.filter(c => c.name !== cmd.name);
+        });
+      }
+      
+      // 새 명령어 등록
+      if (moduleInstance && moduleInstance.slashCommands && Array.isArray(moduleInstance.slashCommands)) {
+        this.registerModuleCommands(moduleName, moduleInstance.slashCommands);
+        logger.success('CommandManager', `'${moduleName}' 모듈의 명령어가 재로드되었습니다.`);
+        return true;
+      } else {
+        logger.warn('CommandManager', `'${moduleName}' 모듈에 slashCommands 배열이 없습니다.`);
+        return false;
+      }
+    } catch (error) {
+      logger.error('CommandManager', `'${moduleName}' 모듈의 명령어 재로드 중 오류 발생: ${error.message}`);
+      return false;
+    }
   }
 }
 
